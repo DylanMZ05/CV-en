@@ -134,14 +134,14 @@ body, html {
 
     letter-spacing: 2px;
     margin-bottom: 0;
-    animation: entrance 2s ease 0s 1 normal forwards;
+    animation: entrance 1s ease 0s 1 normal forwards;
 }
 
 .first-article h1 {
     text-align: center;
     letter-spacing: 1px;
     margin: 0 0 5px;
-    animation: entrance 2s ease 0s 1 normal forwards;
+    animation: entrance 1s ease 0s 1 normal forwards;
     font-size: 18px;
     opacity: 0.9;
 }
@@ -152,7 +152,7 @@ body, html {
     margin-top: 0px;
     border-radius: 16px;
     background-color: #0069a7;
-    animation: entrance 2.5s ease 0s 1 normal forwards
+    animation: entrance 1.2s ease 0s 1 normal forwards
 }
 
 .first-article a {
@@ -212,6 +212,36 @@ body, html {
 
 .skills-container p {
     margin-top: 0;
+}
+
+.html {
+    opacity: 0;
+    animation: entrance 1s ease 0s 1 normal forwards;
+}
+
+.css {
+    opacity: 0;
+    animation: entrance 1s ease 0.1s 1 normal forwards;
+}
+
+.js {
+    opacity: 0;
+    animation: entrance 1s ease 0.15s 1 normal forwards;
+}
+
+.git {
+    opacity: 0;
+    animation: entrance 1s ease 0.2s 1 normal forwards;
+}
+
+.github {
+    opacity: 0;
+    animation: entrance 1s ease 0.2s 1 normal forwards;
+}
+
+.figma {
+    opacity: 0;
+    animation: entrance 1s ease 0.3s 1 normal forwards;
 }
 
 
@@ -382,19 +412,69 @@ body, html {
 }
 
 
+@media (min-width: 378px) {
+    .html {
+        opacity: 0;
+        animation: entrance 1s ease 0s 1 normal forwards;
+    }
+    
+    .css {
+        opacity: 0;
+        animation: entrance 1s ease 0.1s 1 normal forwards;
+    }
+    
+    .js {
+        opacity: 0;
+        animation: entrance 1s ease 0.2s 1 normal forwards;
+    }
+    
+    .git {
+        opacity: 0;
+        animation: entrance 1s ease 0.1s 1 normal forwards;
+    }
+    
+    .github {
+        opacity: 0;
+        animation: entrance 1s ease 0.2s 1 normal forwards;
+    }
+    
+    .figma {
+        opacity: 0;
+        animation: entrance 1s ease 0.3s 1 normal forwards;
+    }
+}
+
 
 @media (min-width: 700px) {
     .dekstop {
         display: flex;
     }
 
+    .first-article__container {
+        flex-direction: row;
+        max-width: 700px;
+    }
+
+    .dmz_container {
+        width: 500px;
+        margin-left: 20px;
+    }
+
+    .skills-container {
+        width: 400px;
+    }
+
+    .skills-container div {
+        margin: 1vw 1vw;
+    }
+
     .first-article b {
-        font-size: 60px;
-        text-underline-offset: 22px;
+        font-size: 30px;
+        text-decoration: none;
     }
 
     .first-article h1 {
-        font-size: 30px;
+        font-size: 15px;
         margin-bottom: 15px;
     }
 
@@ -410,33 +490,7 @@ body, html {
         box-shadow: 0px 0px 10px #000;
     }
 
-
-
-
-
-    .second-article__card {
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .second-article__card img {
-        width: 250px;
-        margin: 20px;
-    }
-
-    .second-article__card h3 {
-        font-size: 30px;
-        width: 50vw;
-    }
-
-    .second-article__card p {
-        font-size: 25px;
-    }
-
-    .card-2 {
-        text-align: end;
-    }
+    
 
 
 
@@ -580,9 +634,11 @@ body, html {
 @keyframes entrance {
 	0% {
 		transform: scale(0);
+        opacity: 0;
 	}
 
 	100% {
+        opacity: 1;
 		transform: scale(1);
 	}
 }
